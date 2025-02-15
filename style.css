@@ -1,0 +1,104 @@
+/* General Styles */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #ff1493;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+}
+
+/* Video Background */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#bgVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Container Utama */
+.container {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 240, 245, 0.8);
+    padding: 30px;
+    border-radius: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 10px 20px rgba(255, 20, 147, 0.3);
+    animation: float 3s ease-in-out infinite;
+}
+
+h1, h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #ff1493;
+}
+
+p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Tombol */
+button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #ff1493;
+    transform: scale(1.1);
+}
+
+/* Hitungan Mundur */
+.countdown {
+    margin-top: 20px;
+}
+
+#timer {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff69b4;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+/* Animasi Tulisan Masuk */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#secretMessage {
+    animation: slideIn 1s ease-out;
+}
